@@ -75,15 +75,15 @@ public class RotX {
 
     }
 
-    public static void main (String[] args){
-        String frase = "Juan Manuel Sanchez";
-        String xifrat = "Itzm Lzmtdk Rzmbgdy";
-        int desplaçament = 25;
+        public static void main (String[] args){
+            String frase = "Juan Manuel Sanchez";
+            String xifrat = "Itzm Lzmtdk Rzmbgdy";
+            int desplaçament = 25;
 
-        //xifraRotX(frase, desplaçament);
-        //desxifraRotX(xifrat, desplaçament);
-        forcaBrutaRotX(xifrat);
-    }
+            //xifraRotX(frase, desplaçament);
+            //desxifraRotX(xifrat, desplaçament);
+            forcaBrutaRotX(xifrat);
+        }
  
  
 }
