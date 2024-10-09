@@ -13,7 +13,7 @@ public class Monoalfabetic {
 
     public static void main(String[] args) {
         alfabetPermutat = permutaAlfabet(alfabet);
-        String cadena = "caqueta jaja";
+        String cadena = "Bon Dia!";
 
         String xifrat = xifraMonoAlfa(cadena);
 
@@ -45,17 +45,17 @@ public class Monoalfabetic {
 
         StringBuilder xifrat = new StringBuilder();
 
-        for (char c : cadena.toCharArray()) {
-            if (Character.isLetter(c)){
+        for (char j : cadena.toCharArray()) {
+            if (Character.isLetter(j)){
                 for (int i = 0; i < alfabet.length; i++) {
-                    if (alfabet[i] == c) {
+                    if (alfabet[i] == j) {
                         xifrat.append(alfabetPermutat[i]);
                         break;
                     }
             
                 }
             } else {
-                xifrat.append(c);
+                xifrat.append(j);
             }
         }
 
@@ -66,17 +66,17 @@ public class Monoalfabetic {
 
         StringBuilder desxifrat = new StringBuilder();
 
-        for (char c: xifrat.toCharArray()){
-            if (Character.isLetter(c)){
+        for (char j: xifrat.toCharArray()){
+            if (Character.isLetter(j)){
                 for (int i = 0; i < alfabetPermutat.length; i++){
-                    if (alfabetPermutat[i] == c){
+                    if (alfabetPermutat[i] == j){
                         desxifrat.append(alfabet[i]);
                         break;
                     }
                 }
 
             }else {
-                desxifrat.append(c);
+                desxifrat.append(j);
             }
         }
 
