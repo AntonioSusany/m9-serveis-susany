@@ -8,21 +8,18 @@ import javax.crypto.Cipher;
 
 public class ClauPublica {
 
-    // Mètode per generar un parell de claus RSA
     public KeyPair generaParellClausRSA() throws Exception {
-        KeyPairGenerator generador = KeyPairGenerator.getInstance("RSA");
-        generador.initialize(2048); // Assegura una longitud de clau segura
-        return generador.generateKeyPair();
+        KeyPairGenerator generator = KeyPairGenerator.getInstance("RSA");
+        generator.initialize(2048); // Longitud de clau de 2048 bits
+        return generator.generateKeyPair();
     }
 
-    // Mètode per xifrar un missatge amb la clau pública
     public byte[] xifraRSA(String msg, PublicKey clauPublica) throws Exception {
         Cipher cipher = Cipher.getInstance("RSA");
         cipher.init(Cipher.ENCRYPT_MODE, clauPublica);
         return cipher.doFinal(msg.getBytes("UTF-8"));
     }
 
-    // Mètode per desxifrar un missatge amb la clau privada
     public String desxifraRSA(byte[] msgXifrat, PrivateKey clauPrivada) throws Exception {
         Cipher cipher = Cipher.getInstance("RSA");
         cipher.init(Cipher.DECRYPT_MODE, clauPrivada);
@@ -30,4 +27,3 @@ public class ClauPublica {
         return new String(msgDesxifrat, "UTF-8");
     }
 }
-
